@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+    <link href='{% static "../static/css/base.css" %}' rel="stylesheet">
+</head>
+<body>
+    <div id="content">
+        {% block content %}
+        {% endblock %}
+    </div>
+    <div id="sidebar">
+        <h2>My blog</h2>
+        <p>This is my blog.</p>
+    </div>
+    <footer>
+        <h2>
+            <a href="{% url 'blog:post_new' %}">
+                Yangi post qo'shish
+            </a>
+        </h2>
+    </footer>
+</body>
+</html>
